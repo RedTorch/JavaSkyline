@@ -23,7 +23,7 @@ public class SkylinePanel extends JPanel
        building4= new Building ();
        building5= new Building ();
 
-      setPreferredSize (new Dimension(300, 200));
+      setPreferredSize (new Dimension(600, 400));
       setBackground (Color.cyan);
    }
    //-------------------------------------------------
