@@ -6,6 +6,7 @@
 */
 
 import java.awt.*;
+//import java.math.*;
 
 public class Building
 {
@@ -32,6 +33,12 @@ public class Building
    {
       g.setColor (color);
       g.fillRect (x, GROUND_LEVEL-height, width, height);
+      g.setColor (color.yellow);
+      for(int i = 1; i < width-6; i += 6){
+         for(int z = 1; z < height-11; z += 11){
+            g.fillRect (i + x, z + GROUND_LEVEL-height, 5, 10);
+         }
+      }
    }
 
    //-----------------------------------------------------------------
@@ -102,7 +109,7 @@ public class Building
    //-----------------------------------------------------------------
    //  toSring method
    //-----------------------------------------------------------------
-   public string toString(){
+   public String toString(){
       return "x(" + x + ") width(" + width + ") height(" + height + ")";
    }
 }
