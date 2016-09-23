@@ -100,9 +100,9 @@ public class Building
    }
 
    //-----------------------------------------------------------------
-   //  toPring method
+   //  toSring method
    //-----------------------------------------------------------------
-   public void toString(){
-      System.out.println("x(" + x + ") width" + width + ") height(" + height + ")");
-   }
+   //public string toString(){
+   //   return "x(" + x + ") width" + width + ") height(" + height + ")");
+   //}
 }
