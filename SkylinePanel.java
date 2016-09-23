@@ -10,7 +10,7 @@ import java.awt.*;
 
 public class SkylinePanel extends JPanel
 {
-   private Building building1, building2, building3, building4, building5;
+   private Building building1, building2, building3, building4, building5, building6;
 
    //-------------------------------------------------
    //   Default Constructor: Sets up the Panel
@@ -22,7 +22,9 @@ public class SkylinePanel extends JPanel
       building3 = new Building(230, Color.black, 70, 300);
       building4 = new Building(340, Color.black, 45, 200);
       building5 = new Building(400, Color.black, 100, 370);
-
+      building6 = new Building(510, Color.black, 80, 130);
+      
+      System.out.println(building1);
       setPreferredSize (new Dimension(600, 400));
       setBackground (Color.cyan);
    }
@@ -37,5 +39,6 @@ public class SkylinePanel extends JPanel
       building3.draw(page);
       building4.draw(page);
       building5.draw(page);
+      building6.draw(page);
    }
 }
