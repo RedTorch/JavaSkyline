@@ -7,7 +7,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Splat
+public class Skyline
 {
    //-----------------------------------------------------------------
    //  Presents a collection of circles.
