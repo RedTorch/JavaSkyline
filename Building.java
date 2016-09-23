@@ -98,4 +98,11 @@ public class Building
    {
       return height;
    }
+
+   //-----------------------------------------------------------------
+   //  toPring method
+   //-----------------------------------------------------------------
+   public void toString(){
+      System.out.println("x(" + x + ") width" + width + ") height(" + height + ")");
+   }
 }
