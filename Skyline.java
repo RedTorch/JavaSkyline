@@ -1,6 +1,6 @@
 /**
  * Skyline --- program to display a pretty skyline
- * @author     Lewis/Loftus
+ * @author     Lewis/Loftus, modified by Kenta Medina
  * @version    1.0
  * @since      2016-09-22
 */
