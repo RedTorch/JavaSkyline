@@ -22,7 +22,7 @@ public class Building
       color = shade;
       width = iwidth;
       height = iheight;
-      GROUND_LEVEL = 280;
+      GROUND_LEVEL = 580;
    }
 
    //-----------------------------------------------------------------
