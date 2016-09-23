@@ -102,7 +102,7 @@ public class Building
    //-----------------------------------------------------------------
    //  toSring method
    //-----------------------------------------------------------------
-   //public string toString(){
-   //   return "x(" + x + ") width" + width + ") height(" + height + ")";
-   //}
+   public string toString(){
+      return "x(" + x + ") width(" + width + ") height(" + height + ")";
+   }
 }
