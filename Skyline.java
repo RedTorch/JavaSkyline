@@ -10,7 +10,14 @@ import java.awt.*;
 
 public class Skyline
 {
-   //displays the skyline in a JFrame
+   /**
+   * displays the skyline in a JFrame
+   * @param arg A string array containing 
+   * the command line arguments.
+   * @exception Any exception
+   * @return No return value.
+   */ 
+
    public static void main (String[] args)
    {
       JFrame frame = new JFrame ("Skyline");
