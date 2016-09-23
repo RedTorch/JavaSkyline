@@ -1,8 +1,9 @@
-//********************************************************************
-//  Circle.java       Author: Lewis/Loftus
-//
-//  Represents a circle with a particular position, size, and color.
-//********************************************************************
+/**
+ * Building --- class for rectangle-shaped building, to be called by SkylinePanel
+ * @author      Kenta Medina
+ * @version     1.0
+ * @since       2016-09-22
+*/
 
 import java.awt.*;
 
@@ -13,7 +14,7 @@ public class Building
    private Color color;
 
    //-----------------------------------------------------------------
-   //  Constructor: Sets up this circle with the specified values.
+   //  Constructor: Sets up the building with the specified values.
    //-----------------------------------------------------------------
    public Building (int ix, Color shade, int iwidth, int iheight)
    {
@@ -24,7 +25,7 @@ public class Building
    }
 
    //-----------------------------------------------------------------
-   //  Draws this circle in the specified graphics context.
+   //  Draws the building in the specified graphics context.
    //-----------------------------------------------------------------
    public void draw (Graphics g)
    {
@@ -33,7 +34,7 @@ public class Building
    }
 
    //-----------------------------------------------------------------
-   //  Diameter mutator.
+   //  x-value mutator.
    //-----------------------------------------------------------------
    public void setX (int iX)
    {
@@ -49,7 +50,7 @@ public class Building
    }
 
    //-----------------------------------------------------------------
-   //  X mutator.
+   //  width mutator.
    //-----------------------------------------------------------------
    public void setWidth (int iWidth)
    {
@@ -58,7 +59,7 @@ public class Building
 
 
    //-----------------------------------------------------------------
-   //  Y mutator.
+   //  height mutator.
    //-----------------------------------------------------------------
    public void setHeight (int iHeight)
    {
@@ -66,7 +67,7 @@ public class Building
    }
 
    //-----------------------------------------------------------------
-   //  Diameter accessor.
+   //  x accessor.
    //-----------------------------------------------------------------
    public int getX ()
    {
@@ -82,7 +83,7 @@ public class Building
    }
 
    //-----------------------------------------------------------------
-   //  X accessor.
+   //  width accessor.
    //-----------------------------------------------------------------
    public int getWidth ()
    {
@@ -90,7 +91,7 @@ public class Building
    }
 
    //-----------------------------------------------------------------
-   //  Y accessor.
+   //  height accessor.
    //-----------------------------------------------------------------
    public int getHeight ()
    {
