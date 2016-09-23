@@ -17,11 +17,11 @@ public class SkylinePanel extends JPanel
    //-------------------------------------------------
    public SkylinePanel()
    {  
-       building1= new Building ();
-       building2= new Building ();
-       building3= new Building ();
-       building4= new Building ();
-       building5= new Building ();
+      building1 = new Building(10, Color.black, 100, 100);
+      building2 = new Building(120, Color.black, 50, 150);
+      building3 = new Building(230, Color.black, 70, 300);
+      building4 = new Building(340, Color.black, 45, 200);
+      building5 = new Building(400, Color.black, 100, 370);
 
       setPreferredSize (new Dimension(600, 400));
       setBackground (Color.cyan);
@@ -32,9 +32,10 @@ public class SkylinePanel extends JPanel
    public void paintComponent (Graphics page)
    {
       super.paintComponent(page);
-  
-      
-      
-      
+      building1.draw(page);
+      building2.draw(page);
+      building3.draw(page);
+      building4.draw(page);
+      building5.draw(page);
    }
 }
