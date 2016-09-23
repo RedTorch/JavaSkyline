@@ -9,7 +9,7 @@ import java.awt.*;
 public class Building
 {
    private int x, width, height;
-   private final int GROUND_LEVEL;
+   private int GROUND_LEVEL;
    private Color color;
 
    //-----------------------------------------------------------------
@@ -28,8 +28,8 @@ public class Building
    //-----------------------------------------------------------------
    public void draw (Graphics g)
    {
-      page.setColor (color);
-      page.fillRect (x, GROUND_LEVEL-height, width, height);
+      g.setColor (color);
+      g.fillRect (x, GROUND_LEVEL-height, width, height);
    }
 
    //-----------------------------------------------------------------
