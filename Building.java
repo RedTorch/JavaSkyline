@@ -26,7 +26,7 @@ public class Building
    //-----------------------------------------------------------------
    //  Draws this circle in the specified graphics context.
    //-----------------------------------------------------------------
-   public void draw (Graphics page)
+   public void draw (Graphics g)
    {
       page.setColor (color);
       page.fillRect (x, GROUND_LEVEL-height, width, height);
