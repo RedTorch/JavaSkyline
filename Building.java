@@ -8,18 +8,19 @@ import java.awt.*;
 
 public class Building
 {
-   private int diameter, x, y;
+   private int x, width, height;
+   private final int GROUND_LEVEL;
    private Color color;
 
    //-----------------------------------------------------------------
    //  Constructor: Sets up this circle with the specified values.
    //-----------------------------------------------------------------
-   public Building (int size, Color shade, int upperX, int upperY)
+   public Building (int ix, Color shade, int iwidth, int iheight)
    {
-      diameter = size;
+      x = ix;
       color = shade;
-      x = upperX;
-      y = upperY;
+      width = iwidth;
+      height = iheight;
    }
 
    //-----------------------------------------------------------------
@@ -28,15 +29,15 @@ public class Building
    public void draw (Graphics page)
    {
       page.setColor (color);
-      page.fillOval (x, y, diameter, diameter);
+      page.fillRect (x, GROUND_LEVEL-height, width, height);
    }
 
    //-----------------------------------------------------------------
    //  Diameter mutator.
    //-----------------------------------------------------------------
-   public void setDiameter (int size)
+   public void setX (int iX)
    {
-      diameter = size;
+      x = iX;
    }
 
    //-----------------------------------------------------------------
@@ -50,26 +51,26 @@ public class Building
    //-----------------------------------------------------------------
    //  X mutator.
    //-----------------------------------------------------------------
-   public void setX (int upperX)
+   public void setWidth (int iWidth)
    {
-      x = upperX;
+      width = iWidth;
    }
 
 
    //-----------------------------------------------------------------
    //  Y mutator.
    //-----------------------------------------------------------------
-   public void setY (int upperY)
+   public void setHeight (int iHeight)
    {
-      y = upperY;
+      height = iHeight;
    }
 
    //-----------------------------------------------------------------
    //  Diameter accessor.
    //-----------------------------------------------------------------
-   public int getDiameter ()
+   public int getX ()
    {
-      return diameter;
+      return x;
    }
 
    //-----------------------------------------------------------------
@@ -83,16 +84,16 @@ public class Building
    //-----------------------------------------------------------------
    //  X accessor.
    //-----------------------------------------------------------------
-   public int getX ()
+   public int getWidth ()
    {
-      return x;
+      return width;
    }
 
    //-----------------------------------------------------------------
    //  Y accessor.
    //-----------------------------------------------------------------
-   public int getY ()
+   public int getHeight ()
    {
-      return y;
+      return height;
    }
 }
