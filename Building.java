@@ -33,27 +33,38 @@ public class Building
    {
       g.setColor (color);
       g.fillRect (x, y-height, width, height);
-      g.setColor (color.blue);
+      g.setColor (color.yellow);
       for(int i = 1; i < width-6; i += 6){
          for(int z = 1; z < height-11; z += 11){
             if(Math.random() < 0.1)
             {
                int toRandom = (int)(Math.random()*10);
-               switch (toRandom)
-               {
-                  case 0: g.setColor (color.cyan);
-                  case 1: g.setColor (color.green);
-                  case 2: g.setColor (color.yellow);
-                  case 3: g.setColor (color.orange);
-                  case 4: g.setColor (color.cyan);
-                  case 5: g.setColor (color.orange);
-                  case 6: g.setColor (color.pink);
-                  case 7: g.setColor (color.red);
-                  case 8: g.setColor (color.white);
-                  case 9: g.setColor (color.blue);
-               }
+               System.out.println("toRandom:" + toRandom);
+               // switch (toRandom)
+               // {
+               //    case 0: g.setColor (color.cyan); System.out.println("case tripped "+ toRandom);
+               //    case 1: g.setColor (color.green); System.out.println("case tripped "+ toRandom);
+               //    case 2: g.setColor (color.yellow); System.out.println("case tripped "+ toRandom);
+               //    case 3: g.setColor (color.orange); System.out.println("case tripped "+ toRandom);
+               //    case 4: g.setColor (color.cyan); System.out.println("case tripped "+ toRandom);
+               //    case 5: g.setColor (color.orange); System.out.println("case tripped "+ toRandom);
+               //    case 6: g.setColor (color.pink); System.out.println("case tripped "+ toRandom);
+               //    case 7: g.setColor (color.red); System.out.println("case tripped "+ toRandom);
+               //    case 8: g.setColor (color.white); System.out.println("case tripped "+ toRandom);
+               //    case 9: g.setColor (color.green); System.out.println("case tripped "+ toRandom);
+               // }
+               if(toRandom == 0){g.setColor (Color.blue);}
+               if(toRandom == 1){g.setColor (Color.green);}
+               if(toRandom == 2){g.setColor (Color.yellow);}
+               if(toRandom == 3){g.setColor (Color.orange);}
+               if(toRandom == 4){g.setColor (Color.cyan);}
+               if(toRandom == 5){g.setColor (Color.pink);}
+               if(toRandom == 6){g.setColor (Color.red);}
+               if(toRandom == 7){g.setColor (Color.white);}
+               if(toRandom == 8){g.setColor (Color.magenta);}
+               if(toRandom == 9){g.setColor (Color.lightGray);}
                g.fillRect (i + x, z + y-height, 5, 10);
-               System.out.println("window printed");
+               System.out.println("window printed" + toRandom);
             }
             //g.fillRect (i + x, z + y-height, 5, 10);
          }
