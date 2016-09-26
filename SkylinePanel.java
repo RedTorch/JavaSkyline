@@ -7,6 +7,7 @@
 
 import javax.swing.*;
 import java.awt.*;
+import java.lang.*;
 
 public class SkylinePanel extends JPanel
 {
@@ -17,16 +18,16 @@ public class SkylinePanel extends JPanel
    //-------------------------------------------------
    public SkylinePanel()
    {  
-      building1 = new Building(10, 380, Color.black, 100, 100);
-      building2 = new Building(120, 380, Color.black, 50, 150);
-      building3 = new Building(230, 380, Color.black, 70, 300);
-      building4 = new Building(340, 380, Color.black, 45, 200);
-      building5 = new Building(400, 380, Color.black, 100, 370);
-      building6 = new Building(510, 380, Color.black, 80, 130);
+      building1 = new Building(10, 380, new Color(5,5,5), 100, 50);
+      building2 = new Building(120, 380, new Color(5,5,5), 50, 75);
+      building3 = new Building(230, 380, new Color(5,5,5), 70, 150);
+      building4 = new Building(340, 380, new Color(5,5,5), 45, 100);
+      building5 = new Building(400, 380, new Color(5,5,5), 100, 185);
+      building6 = new Building(510, 380, new Color(5,5,5), 80, 65);
       
       System.out.println(building1);
       setPreferredSize (new Dimension(600, 400));
-      setBackground (Color.cyan);
+      setBackground (new Color(0,0,20));
    }
    //-------------------------------------------------
    //   Draws the Panel
@@ -34,13 +35,27 @@ public class SkylinePanel extends JPanel
    public void paintComponent (Graphics page)
    {
       super.paintComponent(page);
+      page.setColor(Color.lightGray);
+      page.fillOval(50,70,40,40);
+      page.setColor(new Color(10,10,10));
+      page.fillRect(0,340,600,60);
+      for(int i = 0; i < 40; i++){
+         page.fillRect((int)(Math.random()*680-40),(int)(Math.random()*40+305),(int)(Math.random()*20+20),40);
+      }
+      page.setColor(new Color(7,7,7));
+      page.fillRect(0,360,600,20);
+      for(int i = 0; i < 40; i++){
+         page.fillRect((int)(Math.random()*680-40),(int)(Math.random()*20+345),(int)(Math.random()*20+20),60);
+      }
+      page.setColor(new Color(5,5,5));
+      page.fillRect(0,380,600,20);
       building1.draw(page);
       building2.draw(page);
       building3.draw(page);
       building4.draw(page);
       building5.draw(page);
       //building6.draw(page);  //the 6th building had to be removed, per assignment restrictions. *weep weep*
-      page.setColor (Color.black);
-      page.drawString("Dkaevnitda Y Mee Lduiona's Skyline", 30, 30); //by the way, this is a hash of both of our names
+      page.setColor (Color.white);
+      page.drawString("David Ye Luo and Kenta Medina's Skyline with windows", 30, 30);
    }
 }
