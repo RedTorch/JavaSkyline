@@ -6,24 +6,24 @@
 */
 
 import java.awt.*;
-//import java.math.*;
+import java.lang.*;
 
 public class Building
 {
    private int x, width, height;
-   private int GROUND_LEVEL;
+   private int y; //380 is ideal
    private Color color;
 
    //-----------------------------------------------------------------
    //  Constructor: Sets up the building with the specified values.
    //-----------------------------------------------------------------
-   public Building (int ix, Color shade, int iwidth, int iheight)
+   public Building (int ix, int iy, Color shade, int iwidth, int iheight)
    {
       x = ix;
+      y = iy;
       color = shade;
       width = iwidth;
       height = iheight;
-      GROUND_LEVEL = 380;
    }
 
    //-----------------------------------------------------------------
@@ -32,11 +32,30 @@ public class Building
    public void draw (Graphics g)
    {
       g.setColor (color);
-      g.fillRect (x, GROUND_LEVEL-height, width, height);
-      g.setColor (color.yellow);
+      g.fillRect (x, y-height, width, height);
+      g.setColor (color.blue);
       for(int i = 1; i < width-6; i += 6){
          for(int z = 1; z < height-11; z += 11){
-            g.fillRect (i + x, z + GROUND_LEVEL-height, 5, 10);
+            if(Math.random() < 0.1)
+            {
+               int toRandom = (int)(Math.random()*10);
+               switch (toRandom)
+               {
+                  case 0: g.setColor (color.cyan);
+                  case 1: g.setColor (color.green);
+                  case 2: g.setColor (color.yellow);
+                  case 3: g.setColor (color.orange);
+                  case 4: g.setColor (color.cyan);
+                  case 5: g.setColor (color.orange);
+                  case 6: g.setColor (color.pink);
+                  case 7: g.setColor (color.red);
+                  case 8: g.setColor (color.white);
+                  case 9: g.setColor (color.blue);
+               }
+               g.fillRect (i + x, z + y-height, 5, 10);
+               System.out.println("window printed");
+            }
+            //g.fillRect (i + x, z + y-height, 5, 10);
          }
       }
    }
@@ -47,6 +66,14 @@ public class Building
    public void setX (int iX)
    {
       x = iX;
+   }
+
+   //-----------------------------------------------------------------
+   //  y-value mutator.
+   //-----------------------------------------------------------------
+   public void setY (int iY)
+   {
+      y = iY;
    }
 
    //-----------------------------------------------------------------
@@ -83,6 +110,15 @@ public class Building
    }
 
    //-----------------------------------------------------------------
+   //  y accessor.
+   //-----------------------------------------------------------------
+   public int getY ()
+   {
+      return y;
+   }
+
+
+   //-----------------------------------------------------------------
    //  Color accessor.
    //-----------------------------------------------------------------
    public Color getColor ()
@@ -107,7 +143,7 @@ public class Building
    }
 
    //-----------------------------------------------------------------
-   //  toSring method
+   //  toString method.
    //-----------------------------------------------------------------
    public String toString(){
       return "x(" + x + ") width(" + width + ") height(" + height + ")";
