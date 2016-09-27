@@ -7,7 +7,12 @@
 
 import javax.swing.*;
 import java.awt.*;
-
+//--------------------------------------------------------------------
+//  1) set background 
+//  2) draw building
+//  3) draw windows
+//  4) draw a sentence
+//--------------------------------------------------------------------
 public class Skyline
 {
    /**
