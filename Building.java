@@ -31,14 +31,18 @@ public class Building
    //-----------------------------------------------------------------
    public void draw (Graphics g)
    {
-      g.setColor (color);
-      g.fillRect (x, y-height, width, height);
+      g.setColor (color);  // building
+      g.fillRect (x, y-height, width, height);   // building
+      
+      //************************************************************************************************
+      //   Windows using nested for loops
+      //************************************************************************************************
       g.setColor (color.yellow);
       for(int i = width%6; i < width-6; i += 6){
          for(int z = 5; z < height-11; z += 11){
             if(Math.random() < 0.02)
             {
-               int toRandom = (int)(Math.random()*3);
+               int toRandom = (int)(Math.random()*3);   // generate number between 0 to 2
                //System.out.println("toRandom:" + toRandom);
                // switch (toRandom)
                // {
