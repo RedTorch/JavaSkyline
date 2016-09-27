@@ -2,7 +2,7 @@
  * Building --- class for rectangle-shaped building, to be called by SkylinePanel
  * @author      Kenta Medina
  * @version     1.0
- * @since       2016-09-22
+ * @since       2016-09-25
 */
 
 import java.awt.*;
@@ -31,20 +31,16 @@ public class Building
    //-----------------------------------------------------------------
    public void draw (Graphics g)
    {
-      g.setColor (color);  // building
-      g.fillRect (x, y-height, width, height);   // building
-      
-      //************************************************************************************************
-      //   Windows using nested for loops
-      //************************************************************************************************
+      g.setColor (color);
+      g.fillRect (x, y-height, width, height);
       g.setColor (color.yellow);
       for(int i = width%6; i < width-6; i += 6){
          for(int z = 5; z < height-11; z += 11){
             if(Math.random() < 0.02)
             {
-               int toRandom = (int)(Math.random()*3);   // generate number between 0 to 2
+               int toRandom = (int)(Math.random()*3);
                //System.out.println("toRandom:" + toRandom);
-               // switch (toRandom)
+               // switch (toRandom) 
                // {
                //    case 0: g.setColor (color.cyan); System.out.println("case tripped "+ toRandom);
                //    case 1: g.setColor (color.green); System.out.println("case tripped "+ toRandom);
