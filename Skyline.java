@@ -2,17 +2,17 @@
  * Skyline --- program to display a pretty skyline
  * @author     Lewis/Loftus, modified by David Ye Luo, Kenta Medina
  * @version    1.0
- * @since      2016-09-26
+ * @since      2016-09-27
 */
-
-//  ALGORITHM:
-//  1) Draw moon
-//  2) Draw background
-//  3) Draw buildings #1-5
 
 import javax.swing.*;
 import java.awt.*;
-
+//--------------------------------------------------------------------
+//  1) set background 
+//  2) draw building
+//  3) draw windows
+//  4) draw a sentence
+//--------------------------------------------------------------------
 public class Skyline
 {
    /**
